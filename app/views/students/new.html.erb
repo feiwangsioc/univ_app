@@ -1,13 +1,9 @@
-<div class="row">
-  <div class="col s12">
-    <h3 class="center-align"> Sign up! </h3>
-  </div>
-</div>
 
 <div class="container">
   <div class="row center">
     <div class="col s12 m12 l12">
       <div class="card-panel">
+        <h3 class="header"> Sign up! </h3>
         <div class="row">
           <%= form_for(@student, html: {class: "col s12"}) do |f| %>
             <div class="row">
@@ -23,8 +19,11 @@
                 <%= f.label :email %>
               </div>
             </div>  
-                
-                <%= f.submit "Submit" %>
+            <div class="row">
+              <div class="input_field col s12">
+                <%= f.submit "Submit", class: "btn orange waves-effect waves-light right" %>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
