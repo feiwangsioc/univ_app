@@ -7,6 +7,10 @@ class StudentsController < ApplicationController
     @student = Student.new  
   end 
   
+  def show
+    @student=Student.find(params[:id])
+  end 
+  
   def create 
     @student = Student.new(student_params)
     if @student.save
@@ -17,6 +21,7 @@ class StudentsController < ApplicationController
     end 
   
   end 
+  
   
   private
    def student_params
