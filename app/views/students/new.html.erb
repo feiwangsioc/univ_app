@@ -1,9 +1,11 @@
 <% if @student.errors.any? %>
-<ul>
-  <% @student.errors.full_messages.each do |message| %>
-  <li><%= message %> </li>
-  <% end %>
-</ul>
+  <%= pluralize(@student.errors.count, "error") %>
+  prohibited your profile from being created.
+  <ul>
+    <% @student.errors.full_messages.each do |message| %>
+    <li><%= message %> </li>
+    <% end %>
+  </ul>
 <% end %>
 
 <div class="container">
